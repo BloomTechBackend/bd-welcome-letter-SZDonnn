@@ -95,7 +95,6 @@ public class Employee {
         }
 
         public Employee build() {
-            //firstname, company
             if (firstname == null) {
                 throw new RuntimeException("Firstname field is required.");
             }

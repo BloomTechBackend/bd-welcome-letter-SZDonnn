@@ -10,9 +10,7 @@ public class FormLetterService {
 
     public void generateWelcomeLetter(Employee employee) throws IOException {
         //TODO: Get template text from resources
-
         //TODO: Replace []ed text with correct info
-
         //TODO: Write finalized String to file
     }
 }

@@ -7,4 +7,22 @@ database Datasource
 participant FormLetterService
 participant FileManager
 
+App -> EmployeeService: getEmployeeById()
+EmployeeService -> EmployeeRepository: getEmployeeById()
+EmployeeRepository -> Datasource: findEmployeeById()
+Datasource -> FormLetterService: findEmployeeById()
+FormLetterService -> FileManager: findEmployeeById()
+
+alt Unsuccessful Retrieval
+EmployeeRepository <-- Datasource: null
+EmployeeService <-- EmployeeRepository: null
+App <-- EmployeeService: RuntimeException("No Employee with id: " + {id})
+end
+
+FormLetterService <-- FileManager: generateWelcomeLetter()
+Datasource <-- FormLetterService: getTextFromFile()
+EmployeeRepository <-- Datasource: writeTextToFile()
+EmployeeService <-- EmployeeRepository: sendFormToEmployeeWithId(): String
+App <-- EmployeeService: sendFormToEmployeeWithId()
+
 @enduml
