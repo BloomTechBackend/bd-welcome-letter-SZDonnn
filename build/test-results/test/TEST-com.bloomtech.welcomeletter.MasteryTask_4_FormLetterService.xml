@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bloomtech.welcomeletter.MasteryTask_4_FormLetterService" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-04T09:00:01" hostname="MININT-EMQS73E" time="0.065">
+  <properties/>
+  <testcase name="generateFormLetter_returnsWelcomeLetter()" classname="com.bloomtech.welcomeletter.MasteryTask_4_FormLetterService" time="0.065"/>
+  <system-out><![CDATA[Data written to file successfully.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

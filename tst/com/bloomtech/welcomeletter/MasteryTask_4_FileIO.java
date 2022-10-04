@@ -32,7 +32,7 @@ public class MasteryTask_4_FileIO {
         
         assertEquals(expected, fileContents);
 
-        Path path = FileSystems.getDefault().getPath("./src/resources/out/testFile.txt");
+        Path path = FileSystems.getDefault().getPath("./src/resources/out/testFile");
         Files.delete(path);
     }
 }
